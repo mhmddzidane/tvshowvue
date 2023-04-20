@@ -93,10 +93,7 @@
       >
         <div class="bg-gray-700 mt-2">
           <div v-for="movie in searchResults" :key="movie.id">
-            <router-link
-              :to="'/detail/' + movie?.show.id"
-              @click="clickFunction"
-            >
+            <a :href="'/detail/' + movie?.show.id" @click="clickFunction">
               <div class="flex p-1">
                 <img
                   :src="movie?.show?.image?.medium"
@@ -114,7 +111,7 @@
                 </div>
               </div>
               <hr class="h-px my-1 bg-gray-500 border-0" />
-            </router-link>
+            </a>
           </div>
         </div>
       </div>
