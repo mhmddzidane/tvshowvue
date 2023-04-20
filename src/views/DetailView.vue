@@ -59,19 +59,21 @@
               <img
                 :src="episode?.image?.medium"
                 alt="episode"
-                class="w-[150px]"
+                class="w-[250px]"
               />
             </div>
             <div v-else>
               <img
                 src="https://us.123rf.com/450wm/yehorlisnyi/yehorlisnyi2104/yehorlisnyi210400016/167492439-no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image.jpg?ver=6"
                 alt="episode"
-                class="w-[150px]"
+                class="w-[250px]"
               />
             </div>
             <div class="flex flex-col ml-2">
               <p>Season {{ episode.season }} Episode {{ episode.number }}</p>
-              <p class="font-semibold text-lg">{{ episode.name }}</p>
+              <p class="font-semibold text-lg">
+                {{ episode.name }}
+              </p>
               <div
                 v-if="episode.rating.average !== null"
                 class="flex items-center"

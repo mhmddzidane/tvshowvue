@@ -11,11 +11,20 @@
       <router-link :to="'/detail/' + show?.show.id">
         <div class="w-[190px] mt-5">
           <div class="overflow-hidden">
-            <img
-              :src="`${show?.show?.image?.medium}`"
-              alt="image"
-              class="hover:scale-125 transition-all duration-500"
-            />
+            <div v-if="show?.show.image !== null">
+              <img
+                :src="`${show?.show?.image?.medium}`"
+                alt="image"
+                class="hover:scale-125 transition-all duration-500"
+              />
+            </div>
+            <div v-else>
+              <img
+                src="https://us.123rf.com/450wm/yehorlisnyi/yehorlisnyi2104/yehorlisnyi210400016/167492439-no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image.jpg?ver=6"
+                alt="image"
+                class="h-[265px]"
+              />
+            </div>
           </div>
           <div class="mt-1">
             <p class="truncate font-semibold">{{ show.show.name }}</p>
