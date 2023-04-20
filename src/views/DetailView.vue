@@ -6,7 +6,7 @@
     <Loading />
   </div>
   <div v-else>
-    <div class="grid grid-cols-5 gap-4 mt-[100px]">
+    <div class="grid grid-cols-5 gap-4 mt-[50px]">
       <div class="sticky top-0 h-[500px]">
         <img :src="`${show?.image?.medium}`" alt="image" class="w-full" />
         <div v-if="show.rating.average !== null" class="flex items-center mt-3">
