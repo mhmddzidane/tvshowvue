@@ -93,7 +93,7 @@
       >
         <div class="bg-gray-700 mt-2">
           <div v-for="movie in searchResults" :key="movie.id">
-            <router-view
+            <router-link
               :to="'/detail/' + movie?.show.id"
               @click="clickFunction"
             >
@@ -114,7 +114,7 @@
                 </div>
               </div>
               <hr class="h-px my-1 bg-gray-500 border-0" />
-            </router-view>
+            </router-link>
           </div>
         </div>
       </div>
