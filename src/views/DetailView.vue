@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="sticky top-0 h-[600px] overflow-scroll scrollbar-hide">
-        <h1 class="text-xl font-bold">Cast & Crews</h1>
+        <h1 class="text-xl font-bold">Cast</h1>
         <div v-for="cast in casts" :key="cast.id">
           <div class="flex items-center my-3">
             <div v-if="cast.person.image !== null">
