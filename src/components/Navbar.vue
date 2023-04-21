@@ -64,7 +64,7 @@
           placeholder="Search Shows..."
           @input="debounceSearch"
           v-model="query"
-          @keydown.enter="searchQuery"
+          v-on:keyup.enter="searchQuery"
         />
         <svg
           class="w-[20px] absolute right-4"
