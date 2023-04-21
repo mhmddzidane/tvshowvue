@@ -1,5 +1,7 @@
 <template>
-  <p>showing result for "{{ this.$route.params.query }}"</p>
+  <p class="text-center text-lg md:text-start">
+    showing result for "{{ this.$route.params.query }}"
+  </p>
   <div v-if="error">
     <p>Something Wrong Happen, Please try again later!</p>
   </div>
@@ -7,9 +9,9 @@
     <Loading />
   </div>
   <div v-else class="flex flex-wrap justify-evenly">
-    <div v-for="show in shows" :key="show.id">
+    <div v-for="show in shows" :key="show.id" class="w-1/2 md:w-[200px]">
       <router-link :to="'/detail/' + show?.show.id">
-        <div class="w-[190px] mt-5">
+        <div class="p-1 mt-5">
           <div class="overflow-hidden">
             <div v-if="show?.show.image !== null">
               <img
@@ -35,7 +37,7 @@
               <span class="text-yellow-500 text-xl">&#9733;</span>
               <p>{{ show.show.rating.average }}</p>
             </div>
-            <div class="flex">
+            <div class="hidden md:flex">
               <div v-for="genre in show.show.genres" :key="genre.id">
                 <p class="text-xs truncate">{{ genre + "," }}</p>
               </div>

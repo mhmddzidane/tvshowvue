@@ -1,14 +1,14 @@
 <template>
   <div class="mt-10">
-    <h2 class="text-xl font-semibold">Popular Shows</h2>
+    <h2 class="text-xl font-semibold ml-1 md:ml-0">Popular Shows</h2>
     <div class="flex flex-wrap justify-between">
-      <div v-for="show in shows" :key="show.id" class="w-[200px] mt-7">
+      <div v-for="show in shows" :key="show.id" class="w-1/2 md:w-[200px] mt-7">
         <router-link :to="'/detail/' + show.id">
           <div class="overflow-hidden">
             <img
               :src="`${show.image.medium}`"
               alt="image"
-              class="w-[190px] hover:scale-125 transition-all duration-500"
+              class="w-full p-1 md:p-0 md:w-[190px] hover:scale-125 transition-all duration-500"
             />
           </div>
           <div class="mt-1">
@@ -17,7 +17,7 @@
               <span class="text-yellow-500 text-xl">&#9733;</span>
               <p>{{ show.rating.average }}</p>
             </div>
-            <div class="flex">
+            <div class="hidden md:flex">
               <div v-for="genre in show.genres" :key="genre.id">
                 <p class="text-xs truncate">{{ genre + "," }}</p>
               </div>

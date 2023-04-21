@@ -1,5 +1,7 @@
 <template>
-  <div class="px-16 mb-6 flex items-center sticky top-0 bg-gray-900 py-5 z-50">
+  <div
+    class="px-16 mb-6 flex flex-col md:flex-row items-center sticky top-0 bg-gray-900 py-5 z-50"
+  >
     <router-link :to="`/`">
       <div class="flex items-center">
         <svg
@@ -46,7 +48,7 @@
             ></line>
           </g>
         </svg>
-        <div class="flex flex-col">
+        <div class="flex flex-col text-center md:text-start">
           <h1 class="uppercase font-bold text-2xl ml-2">TvShowHun</h1>
           <p class="ml-2 text-xs">
             Find the latest news about your favorite tv show
@@ -54,11 +56,11 @@
         </div>
       </div>
     </router-link>
-    <div class="relative ml-auto">
+    <div class="relative mt-4 md:mt-0 md:ml-auto">
       <div class="flex items-center">
         <input
           type="text"
-          class="bg-gray-700 rounded-md p-1 w-[300px] h-[50px] ms-3"
+          class="bg-gray-700 rounded-md p-1 w-[300px] h-[50px] md:ms-3"
           placeholder="Search Shows..."
           @input="debounceSearch"
           v-model="query"

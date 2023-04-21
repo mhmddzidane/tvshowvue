@@ -2,7 +2,7 @@
   <footer class="bg-gray-950 rounded-lg shadow mt-5">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
       <div class="sm:flex sm:items-center sm:justify-between">
-        <div class="flex items-center">
+        <div class="flex items-center justify-center md:justify-start">
           <svg
             viewBox="0 0 24 24"
             class="w-[70px]"
@@ -49,13 +49,13 @@
           </svg>
           <div class="flex flex-col">
             <h1 class="uppercase font-bold text-2xl ml-2">TvShowHun</h1>
-            <p class="ml-2 text-xs">
+            <p class="ml-2 text-xs hidden md:flex">
               Find the latest news about your favorite tv show
             </p>
           </div>
         </div>
         <ul
-          class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
+          class="flex flex-wrap items-center justify-center mt-4 md:mt-0 mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
         >
           <li>
             <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
@@ -75,7 +75,7 @@
         class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
       />
       <span
-        class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+        class="block text-center text-sm text-gray-500 sm:text-center dark:text-gray-400"
         >© 2023
         <a href="https://flowbite.com/" class="hover:underline">Tvshow Hunter</a
         >. All Rights Reserved.</span
